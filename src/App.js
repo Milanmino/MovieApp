@@ -9,6 +9,7 @@ const App = () => {
   const [showMovies, setShowMovies] = useState(false);
   const [searchInput, setSearchInput] = useState('');
 
+
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=8e62992b5333a47ef89b8ed23072d6a0&language=en-US&page=1')
       .then(response => response.json())
@@ -34,11 +35,10 @@ const App = () => {
   }
   return (
     <div className="">
-      {/* <h1 className="welcome">Welcome to MovieApp</h1> */}
-      <header className="search">
-        <input className="" type='search' placeholder='search movies' onChange={searchMoviesHandler} />
+      <header className="header">
+        <input className="search" type='search' placeholder='search movies' onChange={searchMoviesHandler} />
       </header>
-
+      <h1 className="welcome">Welcome to MovieApp</h1>
       <Routes>
         <Route path="/" element={renderMovies} />
         <Route path="/about" element={<About />} />
