@@ -1,0 +1,38 @@
+.movie {
+  max-width: 50rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.movie img {
+  width: 30rem;
+  height: 38rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.movie .info {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40rem;
+  padding: 0.03px 1px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  background-color: #ccc;
+  color: black;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.genres {
+  list-style: none;
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.genres li {
+  float: center;
+}

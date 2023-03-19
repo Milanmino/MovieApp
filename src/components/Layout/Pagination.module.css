@@ -1,0 +1,49 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px; /* adjust the height to fit your design */
+}
+
+.pagination li {
+  margin: 0 10px; /* adjust the spacing between pages */
+  list-style: none;
+}
+
+.pagination a {
+  display: block;
+  background-color: #270411;
+  color: #eccf77;
+  width: fit-content; /* so that 'Previous page' fits inside */
+  min-width: 40px;/* adjust the width of each page */
+  height: 40px; /* adjust the height of each page */
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px; /* center the text vertically */
+  border: 1px solid #ccc; /* add a border to the pages */
+  border-radius: 5px; /* round the corners of the pages */
+}
+
+.pagination a:hover,
+.pagination .active a{
+  background-color: #eccf77; /* add a hover effect to the pages */
+  color: #270411;
+}
+
+.pagination .disabled {
+  display: block;
+  background-color: #270411;
+  color: #eccf77;
+  opacity: 0.4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px;
+  width: fit-content;
+  text-align: center;
+  line-height: 40px; /* center the text vertically */
+  padding: 0 5px;
+}
+.prevNext{
+  padding: 0 5px;
+}

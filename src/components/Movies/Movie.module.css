@@ -1,0 +1,51 @@
+.movie {
+  margin: 1rem;
+  padding: 1rem;
+  width: 25rem;
+  height: 45rem;
+  background-color: #270411;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+  text-align: center;
+  color: #e4b11a;
+  display: inline-table;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.movie img {
+  height: 450px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.movie h2 {
+  font-size:1.5rem;
+  color: #e3c100;
+  height: 4rem;
+}
+
+.movie h3 {
+  color: #eccf77;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.movie a {
+  text-decoration: none;
+}
+
+.popularity {
+  height: 12%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  bottom: 0;
+}
+
+.popularity span {
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* sets the left edge of the span element to the center of the parent div */
+  transform: translateX(-50%); /* moves the span element back by 50% of its own width to center it exactly on the parent div */
+}
