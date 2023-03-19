@@ -1,17 +1,14 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import classes from "./Pagination.module.css";
 
 function Pagination(props) {
-  const [searchParams] = useSearchParams(); //get the page from the URL
-  const currentPage = parseInt(searchParams.get("page"), 10); // parse it because it is not a number
-
   const totalPages = 5;
 
   const renderPageNumbers = () => {
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
-      const isCurrentPage = i === currentPage;
+      const isCurrentPage = i === props.currentPage;
       pageNumbers.push(
         <li key={i} className={isCurrentPage ? classes.active : undefined}>
           <Link to={`?page=${i}`} onClick={() => props.onPageChange(i)}>
@@ -24,11 +21,12 @@ function Pagination(props) {
     return pageNumbers;
   };
 
-  const nextPage = currentPage + 1;
-  const prevPage = currentPage - 1;
+  const nextPage = props.currentPage + 1;
+  const prevPage = props.currentPage - 1;
+
   return (
     <div className={classes.pagination}>
-      {currentPage === 1 ? (
+      {props.currentPage === 1 ? (
         <span className={classes.disabled}>Previous Page</span>
       ) : (
         <Link
@@ -40,7 +38,7 @@ function Pagination(props) {
         </Link>
       )}
       {renderPageNumbers()}
-      {currentPage === 5 ? (
+      {props.currentPage === 5 ? (
         <span className={classes.disabled}>Next Page</span>
       ) : (
         <Link
