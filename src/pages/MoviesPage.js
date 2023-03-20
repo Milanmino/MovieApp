@@ -15,7 +15,7 @@ function MoviesPage() {
   const currentPage = parseInt(searchParams.get("page"), 10);
 
   useEffect(() => {
-    setPage(currentPage);
+    setPage(currentPage); // "listening" on changes in the URL
   }, [currentPage]);
 
   useEffect(() => {
@@ -24,8 +24,8 @@ function MoviesPage() {
         `https://api.themoviedb.org/3/movie/popular?api_key=8e62992b5333a47ef89b8ed23072d6a0&language=en-US&page=${page}`
       ); //dynamically fetching the data
       const data = await response.json();
+      // data returns as an array of objects so you have to itterate over every one
       const trasformedMovies = data.results.map((movieData) => {
-        // data returns as an array of objects so you have to itterate over every one
         return {
           image: movieData.poster_path,
           id: movieData.id,
@@ -41,8 +41,7 @@ function MoviesPage() {
   }, [page]);
 
   function handlePageChange(newPage) {
-    //getting the page from Pagination component
-    setPage(newPage);
+    setPage(newPage); //getting the page from Pagination component
   }
 
   return (

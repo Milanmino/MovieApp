@@ -7,14 +7,14 @@ function Pagination(props) {
 
   const renderPageNumbers = () => {
     const pageNumbers = [];
-    for (let i = 1; i <= totalPages; i++) {
+    for (let i = 1; i <= totalPages; i++) { //rendering 5 links for pages
       const isCurrentPage = i === props.currentPage;
       pageNumbers.push(
         <li key={i} className={isCurrentPage ? classes.active : undefined}>
+          {/*onClick is sending the data for the page to be rendered to MoviesPage.js file */}
           <Link to={`?page=${i}`} onClick={() => props.onPageChange(i)}>
             {i}
           </Link>
-          {/*onClick is sending the data for the page to be rendered to MoviesPage.js file */}
         </li>
       );
     }

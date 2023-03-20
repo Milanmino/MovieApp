@@ -4,7 +4,7 @@ import { useRouteLoaderData, json, defer, Await } from "react-router-dom";
 import MovieItem from "../components/Movies/MovieItem";
 
 function MovieDetailsPage() {
-  const { movie } = useRouteLoaderData("movie-detail");
+  const { movie } = useRouteLoaderData("movie-detail"); //getting the data from the  loader
 
   return (
     <Suspense fallback={<p style={{ textAlign: "center" }}>Loading...</p>}>

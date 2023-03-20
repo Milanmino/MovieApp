@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import classes from "./Movie.module.css";
 
-const imgSource = "https://image.tmdb.org/t/p/w300";
+const imgSource = "https://image.tmdb.org/t/p/w300"; //imgSource is always the same
 
 const Movie = (props) => {
   return (
